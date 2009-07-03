@@ -20,3 +20,5 @@ if Object.const_defined? :IRB
   # default: dark background
   UtilityBelt::Themes.background(:dark) if defined? UtilityBelt::Themes
 end
+
+puts "Utility Belt Loaded -- Go Be Batman!"
