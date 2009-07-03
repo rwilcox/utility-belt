@@ -35,6 +35,7 @@ sudo gem install utility_belt
 * Add and subtract Hashes with + and -
 * Grammatically-correct is_an? method - no more "is_a? Array" statements
 * One-character exit command
+* cwd_irb tool (A folder specific.irbrc!)
 
 == COMMUNITY EFFORT
 
@@ -308,6 +309,18 @@ http://blog.jayfields.com/2007/08/ruby-adding-not-method-for-readability.html
 x
 
 Because life is too short to type whole words.
+
+== cwd_irb tool
+
+In your ~/.irbrc file:
+  # Begin additions to IRB that make it search in the current working directory for a #{ENV['USER']_irbrc file and load it
+  require 'utility_belt'
+    UtilityBelt.equip(:cwd_irbrc)
+  # End addition
+
+Which will, as the comment said, look for a #{ENV['USER']}_irbrc file in the folder where you start up IRB (and script/console).
+
+Which beats putting project specific stuff (say shortcuts!) in your global .irbrc file.
 
 == REQUIREMENTS
 
